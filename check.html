@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" >
         <title>東華宿舍包裹系統</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -11,14 +11,47 @@
                 <h1 style="align-self: center;">東華宿舍包裹取件系統</h1>
             </div>
             <a href="login.html"><h6>登出</h6></a>
-            <div style="margin-left: 5vw;">
+            <div style="margin-left: 5vw;" id="list">
                 <a href="checkin.html"><b>包裹登錄</b><br></a>
-                <a href="receiveinstead.html"><b>包裹代領審核</b><br></a>
+                <a href="receiveinstead.html"><b>包裹代領名單</b><br></a>
                 <a href="check.html"><b>包裹領取確認</b><br></a>
                 <a><b>資料管理</b><br></a>
                 <a><b>分析</b><br></a>
                 <a><b>異常報告</b><br>  </a>
             </div>
+            
+            <input type="text" style="margin-left: 75px; height: 20px;" id="search" placeholder="取件碼查詢">
+            <button style="margin-left: 20px;" id="check" onclick="updateplaceehold()">查詢</button>
+            <br>
+            <table border="1">
+                <tr>
+                    <th>登記時間</th>
+                    <th>領取人</th>
+                    <th>包裹件數</th>
+                    <th>取件編號</th>
+                    <th>備註</th>
+                    <th>代領人</th>
+                </tr>
+            </table>
+            <script>
+                function updateplaceehold()
+                {
+                    let change = document.getElementById("search");
+                    
+                    if (change.value.trim() != "")
+                    {
+                        change.value = "";
+                        change.placeholder = "取件號碼查詢";
+                    }
+                    else
+                    {
+                        alert("請輸入取件編號");
+                        change.value = "";
+                        change.placeholder = "取件號碼查詢";
+                    }
+                    
+                }
+            </script>
         </div>
     </body>
 </html>
