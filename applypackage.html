@@ -2,39 +2,50 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewpoint" content="width = device-width, initial-scale = 1.0">
         <title>東華宿舍包裹系統</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="back">
-            <div style="text-align: center;">
-                <h1 style="align-self: center; " id="stu">
-                <a href="student.html" style="color: black; text-decoration: none;">東華宿舍包裹取件系統</a></h1>
-            </div>  
-                <p></p>
-                <a href="login.html"><h6>登出</h6></a>        
-                <!--功能選單-->
-                <div style="margin-left: 5vw;" id="list"> 
-                    <a href="takepack.html"><b>領取包裹</b><br></a> 
-                    <a href="applypackage.html"><b>代領包裹申請</b><br></a> 
-                    <a href="record.html"><b>領取紀錄</b></a>          
+        <script src="hamburger.js"></script>
+        <div class="container">
+            <div id="back">
+                <div style="text-align: center;">
+                    <h1 style="align-self: center; " id="stu">
+                    <a href="student.html" style="color: black; text-decoration: none;">東華宿舍包裹取件系統</a></h1>
                 </div>  
-                <div style="margin-left: 20vw;background-color:flex; align-items:center;">
-                    <label style="margin-left: 10px;">包裹收件人姓名&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" size=10>
-                    <button type="submit" style="margin-left: 15px; ">申請</button>
+                    <p></p>
+                    <a href="login.html"><h6>登出</h6></a>
+                    <!--漢堡選單-->
+                    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>          
+                    <!--功能選單-->
+                    <div style="margin-left: 5vw;" id="list" class="menu"> 
+                        <ul>
+                            <li><a href="takepack.html"><b>領取包裹</b><br></a></li> 
+                            <li><a href="applypackage.html"><b>代領包裹申請</b><br></a></li> 
+                            <li><a href="record.html"><b>領取紀錄</b></a></li>
+                        </ul>               
+                    </div>  
+                    <div style="margin-left: 20vw;background-color:flex; align-items:center;">
+                        <label style="margin-left: 10px;">包裹收件人姓名&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" size=10>
+                        <button type="submit" style="margin-left: 15px; ">申請</button>
+                    </div>
+                    <table>
+                        <tr>
+                            <th >申請人</th>
+                            <th>原領件人</th>
+                            <th>申請時間</th>
+                        </tr>
+                    </table>
+                    
                 </div>
-                <table>
-                    <tr>
-                        <th >申請人</th>
-                        <th>原領件人</th>
-                        <th>申請時間</th>
-                    </tr>
-                </table>
-                
-            </div>
-           
-        </div>
-           
+            
+            </div>    
+        </div> 
     </body>
 </html>

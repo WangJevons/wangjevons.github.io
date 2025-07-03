@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" >
+        <meta name="viewpoint" content="width = device-width, initial-scale = 1.0">
         <title >東華宿舍包裹系統</title>
         <style type="text/css">
            
@@ -13,86 +14,86 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <div style="text-align: center ; ">                
-        <h1 style=" margin-left: 30vw; margin-right: 30vw;">東華宿舍包裹取件系統</h1>
-        <div class ="login" style=" border: 3px rgb(214, 213, 213) solid; margin-left: 35vw; padding-bottom: 2vw;margin-right: 35vw;  background-color: rgba(255, 255, 255, 0.8); ">
+        <div class="container">
+            <div style="text-align: center ;">                
+                <h1 style=" margin-left: 30vw; margin-right: 30vw;">東華宿舍包裹取件系統</h1>
+                <div class ="login" style=" border: 3px rgb(214, 213, 213) solid; margin-left: 35vw; padding-bottom: 2vw;margin-right: 35vw;  background-color: rgba(255, 255, 255, 0.8); ">
 
-                <h2>登入頁面</h2>
-                <input type="radio" name="id" value="id1" id="student" onchange="updateplacehold()">學生
-                <input type="radio" name="id" value="id2" id="manager" onchange="updateplacehold()">管理員 <br>
-                
-                <label >
-                    帳號
-                    <input  type="text" id="userInput" placeholder="帳號" >
-                    <p>
-
-                    </p>
-                    <label >
-                        密碼
-                    </label>
-                    <input type="password" id="password" placeholder="同信箱密碼">
-                    <script>
-                        function updateplacehold()
-                        {
-                            let userInput= document.getElementById("userInput");
-
-                            if(document.getElementById("student").checked)
-                            {
-                                userInput.placeholder="預設為學號"
-                            }   
-                            else if(document.getElementById("manager").checked)
-                            {
-                                userInput.placeholder="預設為信箱@前";
-                            }
-                        }
-                        function login()
-                        {
-                            let userInput = document.getElementById("userInput").value.trim();
-                            let password = document.getElementById("password").value.trim();
-                            let student = document.getElementById("student");
-                            let manager = document.getElementById("manager");
-                            if (userInput==="")
-                            {
-                                 alert("請輸入帳號!!!");
-                                 return;
-                            }
-                            else if (password==="")
-                            {
-                                alert("請輸入密碼!!!");
-                                return;
-                            }
-                            if (student.checked )
-                            {
-                                window.location.href="student.html";
-                            }
-                            else if (manager.checked )
-                            {
-                                window.location.href="manager.html";
-                            }
-                            else
-                            {
-                                alert("請選擇身分");
-                            }
-                        }
+                        <h2>登入頁面</h2>
+                        <input type="radio" name="id" value="id1" id="student" onchange="updateplacehold()">學生
+                        <input type="radio" name="id" value="id2" id="manager" onchange="updateplacehold()">管理員 <br>
                         
-                        window.onload = function() 
-                        {
-                            updateplacehold();
-                        };
-                    </script>   
+                        <label >
+                            帳號
+                            <input  type="text" id="userInput" placeholder="帳號" >
+                            <p>
+
+                            </p>
+                            <label >
+                                密碼
+                            </label>
+                            <input type="password" id="password" placeholder="同信箱密碼">
+                            <script>
+                                function updateplacehold()
+                                {
+                                    let userInput= document.getElementById("userInput");
+
+                                    if(document.getElementById("student").checked)
+                                    {
+                                        userInput.placeholder="預設為學號"
+                                    }   
+                                    else if(document.getElementById("manager").checked)
+                                    {
+                                        userInput.placeholder="預設為信箱@前";
+                                    }
+                                }
+                                function login()
+                                {
+                                    let userInput = document.getElementById("userInput").value.trim();
+                                    let password = document.getElementById("password").value.trim();
+                                    let student = document.getElementById("student");
+                                    let manager = document.getElementById("manager");
+                                    if (userInput==="")
+                                    {
+                                        alert("請輸入帳號!!!");
+                                        return;
+                                    }
+                                    else if (password==="")
+                                    {
+                                        alert("請輸入密碼!!!");
+                                        return;
+                                    }
+                                    if (student.checked )
+                                    {
+                                        window.location.href="student.html";
+                                    }
+                                    else if (manager.checked )
+                                    {
+                                        window.location.href="manager.html";
+                                    }
+                                    else
+                                    {
+                                        alert("請選擇身分");
+                                    }
+                                }
+                                
+                                window.onload = function() 
+                                {
+                                    updateplacehold();
+                                };
+                            </script>   
+                            
+                        </label>
+                        <p></p>
+                        
                     
-                </label>
-                <p></p>
-                
-               
-                
-                <p></p>
-                <div class="bt">
-                    <button type="submit" onclick="login()">登入</button>
+                        
+                        <p></p>
+                        <div class="bt">
+                            <button type="submit" onclick="login()">登入</button>
+                        </div>
                 </div>
-        </div>
-    </div>
-       
-        
+            </div>
+        </div>      
     </body>
 </html>
