@@ -76,7 +76,7 @@ ul
         z-index: 9999;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    .hamburger{ display: block; }
+    .hamburger{ display: flex; }
     .menu.menu-active{ display: block; }
     .hamburger
     {
