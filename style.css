@@ -177,7 +177,7 @@ ul
     }
     input[type="radio"]
     {
-        transform: scale(2);
+        transform: scale(1.2);
         margin-left: 0;
     }
     .search
@@ -218,7 +218,7 @@ ul
         padding-left: 10px;
         display: inline-flex;
         align-items: center;
-        gap: 2px;
+        gap: 0px;
     }
     .front
     {
