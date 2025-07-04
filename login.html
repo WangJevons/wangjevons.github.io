@@ -25,16 +25,11 @@
                         <input type="radio" name="id" value="id2" id="manager" onchange="updateplacehold()">
                         <label for="manager" class="identify">管理員</label>
                         <br>
-                        <label >
-                            帳號
-                            <input  type="text" id="userInput" placeholder="帳號" >
-                            <p>
-
-                            </p>
-                            <label >
-                                密碼
-                            </label>
-                            <input type="password" id="password" placeholder="同信箱密碼">
+                        <label class="front" for="account">帳號</label>
+                        <input name="account" type="text" id="userInput" class="in" placeholder="帳號" >
+                        <br>
+                        <label class="front" for="pass">密碼</label>
+                        <input type="password" id="password" class="in" placeholder="同信箱密碼">
                             <script>
                                 function updateplacehold()
                                 {
@@ -85,7 +80,7 @@
                                 };
                             </script>   
                             
-                        </label>
+                        
                         <p></p>
                         
                     
