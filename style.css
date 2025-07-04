@@ -177,7 +177,8 @@ ul
     }
     input[type="radio"]
     {
-        transform: scale(1.5);
+        transform: scale(2);
+        margin-left: 20px;
     }
     .search
     {
