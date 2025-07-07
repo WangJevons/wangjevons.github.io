@@ -15,22 +15,24 @@
     </head>
     <body>
         <div class="container">
-            <div style="text-align: center ;">                
-                <h1 style=" margin-left: 30vw; margin-right: 30vw;">東華宿舍包裹取件系統</h1>
+            <div class="homepage">      
+                <h1 style=" margin-left: 30vw; margin-right: 30vw;">東華宿舍包裹取件系統</h1>          
                 <div class="login" >
                         <h2>登入頁面</h2>
                         <label class="identify">
                             <input type="radio" name="id" value="id1" id="student" onchange="updateplacehold()">學生
                         </label>
                         <label class="identify">
-                            <input type="radio" name="id" value="id2" id="manager" onchange="updateplacehold()">管理員
+                            <input type="radio" name="id" value="id2" id="manager mplace" onchange="updateplacehold()">管理員
                         </label>
                         <br>
-                        <label class="front" for="account">帳號</label>
-                        <input name="account" type="text" id="userInput" class="in studentin" placeholder="帳號" >
+                        <label class="front" for="account">帳號
+                            <input name="account" type="text" id="userInput" class="in" placeholder="帳號" >
+                        </label>
                         <br>
-                        <label class="front" for="pass">密碼</label>
-                        <input type="password" id="password"  class="in managerin" placeholder="同信箱密碼">
+                        <label class="front" for="pass">密碼
+                            <input type="password" id="password"  class="in" placeholder="同信箱密碼">
+                        </label>
                             <script>
                                 function updateplacehold()
                                 {
@@ -63,7 +65,7 @@
                                     }
                                     if (student.checked )
                                     {
-                                        window.location.href="applypackage.html";
+                                        window.location.href="takepack.html";
                                     }
                                     else if (manager.checked )
                                     {
