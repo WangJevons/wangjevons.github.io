@@ -39,14 +39,14 @@
                     </ul>
                 </div>
                 <div style="text-align:left; margin-left: 20%; margin-top: 5%;">
-                    <h4>收件人姓名</h4>
-                    <input type="text" >
-                    <h4>送達時間</h4>
+                    <h4 class="detail">收件人姓名</h4>
+                    <input type="text" class="info">
+                    <h4 class="detail">送達時間</h4>
                     
                     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
                     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh-tw.js"></script>
                     
-                    <input type="text" id="datetime" >
+                    <input type="text" id="datetime" class="info">
                     
                     <script>
                         flatpickr
@@ -74,11 +74,11 @@
                         }
                         );     
                     </script>
-                    <h4>包裹數量</h4>
-                    <input type="text">
-                    <h4>備註</h4>
-                    <input type="text">
-                    <button style="position: absolute; right: 5vw; top: 90%;"><a href="checkin.html" style="color: black; text-decoration: none;">儲存</a></button>
+                    <h4 class="detail">包裹數量</h4>
+                    <input type="text" class="info">
+                    <h4 class="detail">備註</h4>
+                    <input type="text" class="info">
+                    <button style="position: absolute; right: 5vw; top: 90%; text-decoration: none;" onclick="location.href='checkin.html'" class="bt">儲存</button>
                 </div>
             </div>
         </div>

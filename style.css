@@ -224,9 +224,13 @@ ul
     { 
         display: inline-block;
         padding: 0;
-        margin-left: 40px;
-        width: 80px;
+        margin-left: 50px;
+        width: 70px;
         font-size: 8px;
+    }
+    #back
+    {
+        margin: 50% 0 ;
     }
     .in
     {
@@ -234,16 +238,30 @@ ul
         height: 5px;
         
     }
+    .detail
+    {
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    .info
+    {
+        width: 50px;
+        height: 10px;
+    }
+    .bt
+    {
+        font-size: 10px;
+    }
     h1
     {
         
-        font-size: 15px;
+        font-size: 20px;
     }
     h2
     {
         font-size: 15px;
     }
-    h4
+    .aler
     {
         font-size: 10px;
         padding-left: 10%;
