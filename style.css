@@ -216,10 +216,10 @@ ul
         display: inline-flex;
         align-items: center;
         text-align: center;
-        transform: scale(1.0);
+        transform: scale(1.5);
         font-size: 15px;
-        gap: 2px;
-        margin-left: 40px;
+        gap: 0px;
+        margin-left: 20px;
     }
     .front
     {
