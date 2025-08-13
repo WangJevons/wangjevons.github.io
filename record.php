@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>東華宿舍包裹系統</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="hamburger.js"></script>
+        <div class="container">
+            <div id="back">
+                <div style="text-align: center;">
+                    <h1 style="align-self: center; " id="stu">東華宿舍包裹取件系統</h1>
+                </div>  
+                <a  href="login.html" id="logout" class="desktop" >登出</a>
+                <!--漢堡選單-->
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>  
+                <div style="margin-left: 5vw;" id="list" class="menu"> 
+                    <ul>
+                        <li><a href="takepack.php"><b>領取包裹</b><br></a></li> 
+                        <li><a href="applypackage.php"><b>代領包裹申請</b><br></a></li> 
+                        <li><a href="record.php"><b>領取紀錄</b></a></li>
+                        <li><a href="login.php" class="mobile">登出</a></li>
+                    </ul>                
+                </div> 
+                <h4 style="color: red; float: left; margin-left: 5%; margin-top: 5px;" class="aler">包裹紀錄僅保留14天內的領取紀錄</h4> 
+                <table>
+                    <th>收件人</th>
+                    <th>領取人</th>
+                    <th>領取日期</th>
+                    <th>備註</th>
+                </table>   
+            </div>
+        </div>
+    </body>
+</html>

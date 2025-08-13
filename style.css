@@ -40,11 +40,11 @@ div#back
     padding: 0;
     background-color: rgb(255, 255, 255);
 }
-#list ul li
+.menu ul li
 {
     border-bottom: 3px rgb(232, 232, 232) solid;
 }
-#list ul li a:last-child 
+.menu ul li a:last-child 
 {
     border-bottom: none;
 }
@@ -216,10 +216,11 @@ ul
         display: inline-flex;
         align-items: center;
         text-align: center;
-        transform: scale(1.5);
+        transform: scale(2.0);
         font-size: 15px;
         gap: 0px;
-        margin-left: 40px;
+        padding-left: -30px;
+        margin-right: 40px;
     }
     .front
     {
