@@ -32,9 +32,8 @@ if ($row = $result->fetch_assoc())
     {
         $_SESSION['username'] = $row['username'];
         $_SESSION['id'] = $row['id'];
-        echo json_encode(["success" => true, "message" => "登入成功"] );
 
-        if ($id==='student')
+        if ($role==='student')
         {
             echo "<script>window.location.href='takepack.html';</script>";
         }
@@ -43,19 +42,23 @@ if ($row = $result->fetch_assoc())
         }
         exit;
     }
-    else if{
+    else 
+    {
         echo "<script>alert('密碼錯誤'); window.location.href='login.html';</script>";
         exit;
     }
-    else {
-    echo "<script>alert('帳號錯誤'); window.location.href='login.html';</script>";
-    exit;
     }
-}
+    else 
+    {
+        echo "<script>alert('帳號錯誤'); window.location.href='login.html';</script>";
+        exit;
+    }
+
 
 $stmt->close();
 $conn->close();
 
 header("Location: login.php");
 exit;
+
 ?>
