@@ -1,6 +1,6 @@
 <?php 
-session_star();
-$host = 'locahost';
+session_start();
+$host = 'localhost';
 $dbname = 'dbname';
 $user = 'root';
 $pass = 'password';
@@ -11,9 +11,9 @@ if ($conn->connect_error)
     die(json_encode(["success" => false , "message" => "資料庫連接失敗"]));
 }
 
-$username = $_POST['username'] ?? '';
+$username = $_POST['account'] ?? '';
 $password = $_POST['password'] ?? '';
-$role = $_POST['role'] ?? '';
+$role = $_POST['id'] ?? '';
 
 if (empty($username)||empty($password)||empty($role))
 {
@@ -31,11 +31,26 @@ if ($row = $result->fetch_assoc())
     if (password_verify($password, $row['password']))
     {
         $_SESSION['username'] = $row['username'];
-        $_SESSION['role'] = $row['role'];
-        echo json_encode(["success" => true, "message"] => "登入成功");
+        $_SESSION['id'] = $row['id'];
+        echo json_encode(["success" => true, "message" => "登入成功"] );
+
+        if ($id==='student')
+        {
+            echo "<script>window.location.href='takepack.html';</script>";
+        }
+        else {
+            echo "<script>window.location.href='checkin.html';</script>";
+        }
+        exit;
     }
-    else { echo json_encode(["success" => false, "message" => "密碼錯誤"])};
-    else { echo json_encode(["success" => false, "message" => "帳號不存在" ])};
+    else if{
+        echo "<script>alert('密碼錯誤'); window.location.href='login.html';</script>";
+        exit;
+    }
+    else {
+    echo "<script>alert('帳號錯誤'); window.location.href='login.html';</script>";
+    exit;
+    }
 }
 
 $stmt->close();
